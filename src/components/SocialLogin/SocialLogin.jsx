@@ -29,7 +29,7 @@ const SocialLogin = () => {
               .then(res => {
                 console.log(res.data);
                 if(res.data.insertedId){
-                  toast.success('Welcome to FlixFilm')
+                  toast.success('Welcome to FilmHoliday')
                 }
               })
               .catch(err => {

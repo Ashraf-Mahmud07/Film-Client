@@ -31,7 +31,7 @@ const Signup = () => {
       console.log(res.data);
       if(res.data.insertedId){
         navigate("/")
-        toast.success('Welcome to FlixFilm')
+        toast.success('Welcome to FilmHoliday')
       }
     })
     .catch(err => {

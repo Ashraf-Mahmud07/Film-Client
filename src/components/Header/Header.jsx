@@ -104,7 +104,7 @@ console.log(isAdmin);
     <header className={`header ${mobileMenu ? "mobileView" : ""} ${show}`}>
       <ContentWrapper>
         <div className="logo" onClick={() => navigate("/")}>
-          <h1 className="text-red-700 font-extrabold text-3xl ">FlixFilm</h1>
+          <h1 className="text-red-700 font-extrabold text-3xl ">FilmHoliday</h1>
         </div>
 
         <ul className="menuItems">

@@ -37,7 +37,7 @@ const Sidebar = () => {
               !open && "scale-0"
             }`}
           >
-            FlixFilm
+            FilmHoliday
           </h1>
         </div></Link>
         <ul className="pt-6">
