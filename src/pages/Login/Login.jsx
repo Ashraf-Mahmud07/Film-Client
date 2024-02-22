@@ -21,13 +21,13 @@ const Login = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    console.log(data);
+    // console.log(data);
 
     setShowError("");
     loginUser(data.email, data.password)
       .then((result) => {
         const loginUser = result.user;
-        console.log(loginUser);
+        // console.log(loginUser);
         navigate(from, { replace: true });
         toast.success('Successfully Login!')
       })

@@ -30,12 +30,12 @@ const UserProfile = () => {
       axios
         .get(`https://movie-app-server-eight.vercel.app/userprofile/${user?.email}`)
         .then((res) => {
-          console.log(res.data);
+          // console.log(res.data);
           setUserProfile(res.data);
         });
     }
   }, [user]);
-  console.log(userProfile);
+  // console.log(userProfile);
 
   const [isAdmin] = useAdmin();
 

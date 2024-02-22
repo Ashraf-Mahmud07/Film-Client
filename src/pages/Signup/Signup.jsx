@@ -19,7 +19,7 @@ const Signup = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    console.log(data);
+    // console.log(data);
 
     axios.post(`https://movie-app-server-eight.vercel.app/users`, {
       name: data.name,

@@ -18,7 +18,7 @@ const SocialLogin = () => {
         googleLogin()
         .then(result => {
             const loggedUser = result.user;
-            console.log(loggedUser);
+            // console.log(loggedUser);
 
             axios.post(`https://movie-app-server-eight.vercel.app/users`, {
                 name: loggedUser.displayName,
@@ -27,7 +27,7 @@ const SocialLogin = () => {
                 date: new Date()
               })
               .then(res => {
-                console.log(res.data);
+                // console.log(res.data);
                 if(res.data.insertedId){
                   toast.success('Welcome to FilmHoliday')
                 }

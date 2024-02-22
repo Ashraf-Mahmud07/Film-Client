@@ -31,7 +31,7 @@ const Subscription = () => {
     fetch('https://movie-app-server-eight.vercel.app/subscriptions')
     .then(res => res.json())
     .then(data => {
-      console.log(data);
+      // console.log(data);
       setSubscriptions(data)
     })
   },[])

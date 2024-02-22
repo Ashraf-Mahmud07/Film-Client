@@ -41,7 +41,7 @@ const CheckoutForm = ({loadedSubcription}) => {
         if (card === null) {
           return;
         }
-        console.log('card', card);
+        // console.log('card', card);
     
         const { error, paymentMethod } = await stripe.createPaymentMethod({
           type: "card",
@@ -54,7 +54,7 @@ const CheckoutForm = ({loadedSubcription}) => {
           setCardError(error.message);
         } else {
           setCardError("");
-          console.log("[PaymentMethod]", paymentMethod);
+          // console.log("[PaymentMethod]", paymentMethod);
         }
     
         setProcessing(true);
@@ -70,7 +70,7 @@ const CheckoutForm = ({loadedSubcription}) => {
           });
     
         if (confirmError) {
-          console.log("confirmError", confirmError);
+          // console.log("confirmError", confirmError);
         }
         setProcessing(false);
         console.log(paymentIntent);

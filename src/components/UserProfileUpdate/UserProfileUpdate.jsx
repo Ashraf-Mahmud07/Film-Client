@@ -48,7 +48,7 @@ const UserProfileUpdate = () => {
                     photo: profileURL
                   })
                   .then(res => {
-                    console.log("profile updated", res.data);
+                    // console.log("profile updated", res.data);
                     if (res.data.modifiedCount > 0) {
                         reset();
                         navigate('/dashboard/userprofile')

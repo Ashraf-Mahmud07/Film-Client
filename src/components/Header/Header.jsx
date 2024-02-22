@@ -24,12 +24,12 @@ const Header = () => {
   const { user, logout } = useAuth();
   const [userProfile, setUserProfile] = useState({})
 
- 
+
   const handleSignout = () => {
     logout()
-    .then(() => {
-      toast.success('Successfully logout!')
-    })
+      .then(() => {
+        toast.success('Successfully logout!')
+      })
   }
 
   useEffect(() => {
@@ -86,18 +86,18 @@ const Header = () => {
 
 
   useEffect(() => {
-    if(user){
+    if (user) {
       axios.get(`https://movie-app-server-eight.vercel.app/userprofile/${user?.email}`)
-      .then(res => {
-        // console.log(res.data);
-        setUserProfile(res.data)
-      })
+        .then(res => {
+          // console.log(res.data);
+          setUserProfile(res.data)
+        })
     }
-  },[user])
+  }, [user])
 
-  
-const [isAdmin] = useAdmin();
-console.log(isAdmin);
+
+  const [isAdmin] = useAdmin();
+  // console.log(isAdmin);
 
 
   return (
@@ -143,22 +143,22 @@ console.log(isAdmin);
           </li>
           {
             user && <li className="menuItem">
-            <Link
-              to={isAdmin ? "/dashboard/adminhome" : "/dashboard/favoritevideos"}
-            >
-              Dashboard
-            </Link>
-          </li>
+              <Link
+                to={isAdmin ? "/dashboard/adminhome" : "/dashboard/favoritevideos"}
+              >
+                Dashboard
+              </Link>
+            </li>
           }
-         {
-          user &&  <li className="menuItem">
-          <Link to="/dashboard/userprofile">
           {
-            user && <Avatar alt="photo" title={userProfile?.name} src={userProfile?.photo ? userProfile?.photo : "https://cdn5.vectorstock.com/i/1000x1000/37/29/male-user-circle-icon-black-avatar-icon-user-vector-22753729.jpg"} />
+            user && <li className="menuItem">
+              <Link to="/dashboard/userprofile">
+                {
+                  user && <Avatar alt="photo" title={userProfile?.name} src={userProfile?.photo ? userProfile?.photo : "https://cdn5.vectorstock.com/i/1000x1000/37/29/male-user-circle-icon-black-avatar-icon-user-vector-22753729.jpg"} />
+                }
+              </Link>
+            </li>
           }
-          </Link>
-          </li>
-         }
           {user ? (
             <li className="menuItem">
               <Link >

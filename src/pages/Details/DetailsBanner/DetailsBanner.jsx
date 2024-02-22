@@ -26,7 +26,7 @@ const DetailsBanner = ({ video, crew }) => {
   const { data, loading } = useFetch(`/${mediaType}/${id}`);
   const { url } = useSelector((state) => state.tmdb);
   const {user} = useAuth()
-  console.log(data);
+  // console.log(data);
 
   const handleFavorite = (favorite) => {
     const {
@@ -52,7 +52,7 @@ const DetailsBanner = ({ video, crew }) => {
       vote_average
     })
     .then(res => {
-      console.log(res.data);
+      // console.log(res.data);
       if(res.data.insertedId){
         toast.success("added to favorite")
       }
@@ -87,7 +87,7 @@ const DetailsBanner = ({ video, crew }) => {
       vote_average
     })
     .then(res => {
-      console.log(res.data);
+      // console.log(res.data);
       if(res.data.insertedId){
         toast.success("added to watch later")
       }
