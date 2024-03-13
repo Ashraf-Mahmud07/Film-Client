@@ -8,26 +8,35 @@ import {
 
 import ContentWrapper from "../ContentWrapper/ContentWrapper";
 import "./style.scss";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
     return (
         <footer className="footer">
             <ContentWrapper>
-            <div className="socialIcons">
-                    <span className="icon">
-                        <FaFacebookF />
-                    </span>
-                    <span className="icon">
-                        <FaInstagram />
-                    </span>
-                    <span className="icon">
-                        <FaTwitter />
-                    </span>
-                    <span className="icon">
-                        <FaLinkedin />
-                    </span>
+                <div className="socialIcons">
+                    <Link to={"https://www.facebook.com/ashraf.mahmud.444"}>
+                        <span className="icon">
+                            <FaFacebookF />
+                        </span>
+                    </Link>
+                    <Link to={"https://www.instagram.com/_ashraf_mahmud_/"}>
+                        <span className="icon">
+                            <FaInstagram />
+                        </span>
+                    </Link>
+                    <Link to={"https://www.twitter.com/"}>
+                        <span className="icon">
+                            <FaTwitter />
+                        </span>
+                    </Link>
+                    <Link to={"https://www.linkedin.com/in/ashraful-islam-04804a283/"}>
+                        <span className="icon">
+                            <FaLinkedin />
+                        </span>
+                    </Link>
                 </div>
-            
+
                 <div className="infoText">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt ut labore et dolore magna
@@ -43,7 +52,7 @@ const Footer = () => {
                     <li className="menuItem">Blog</li>
                     <li className="menuItem">FAQ</li>
                 </ul>
-                
+
             </ContentWrapper>
             <p className="text-center border-t pt-6 lg:mx-64 mx-8 text-sm lg:mb-0 mb-4">©{new Date().getFullYear()} Copyright All right reserved by FilmHoliday LTD -- @Ashraf</p>
         </footer>
