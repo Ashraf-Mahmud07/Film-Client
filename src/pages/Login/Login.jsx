@@ -40,11 +40,11 @@ const Login = () => {
   return (
     <div className="min-h-[700px] pt-[150px] pb-20 lg:px-0 px-4">
       <div className="max-w-md mx-auto bg-slate-900 shadow-xl rounded pt-10">
-        {/* <div className="text-center text-white py-4 text-md">Sign in with</div> */}
-        {/* <SocialLogin /> */}
+        <div className="text-center text-white py-4 text-md">Sign in with</div>
+        <SocialLogin />
         <div className="bg-slate-900 pt-8 pb-16">
           <div className="text-center text-white mb-7 text-md">
-            Sign in with Email &amp; Password
+            Or Sign in with Email &amp; Password
           </div>
           <form onSubmit={handleSubmit(onSubmit)}>
             <div className="w-4/5 mx-auto">
